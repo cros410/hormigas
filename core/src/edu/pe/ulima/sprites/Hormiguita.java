@@ -6,19 +6,18 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector3;
 
 
-public class Hormiga {
+public class Hormiguita {
 
     private Vector3 mPosicion;
     private Vector3 mVelocidad;
-
     private Rectangle mBounds;
-
     private static final int GRAVITY = -5;
     private Texture textureHormiga;
     Animation animationHormiga;
     private boolean life;
+    private static final int PUNTAJE = 10;
 
-    public Hormiga(int x, int y) {
+    public Hormiguita(int x, int y) {
         life = true;
         mPosicion = new Vector3(x, y, 0);
         mVelocidad = new Vector3(0, 0, 0);
@@ -76,5 +75,9 @@ public class Hormiga {
     public void hide() {
         mPosicion.set(5000, 5000, 0);
         mBounds.setX(5000);
+    }
+
+    public static int getPUNTAJE() {
+        return PUNTAJE;
     }
 }
